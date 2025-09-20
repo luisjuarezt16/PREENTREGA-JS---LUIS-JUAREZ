@@ -20,8 +20,10 @@ function agregarHORARIO () {
 
 function verReservas () {
 
-    const usuario = prompt("Ingresa el nombre de usuario:");
-    const contraseña = parseInt(prompt("Ingresa contraseña:"));
+    const usuario = prompt("Ingresa el nombre de usuario (admin):");
+    const contraseña = parseInt(prompt("Ingresa contraseña (12345):"));
+
+    //usuario = admin ; contraseña: 12345
 
     if (usuario == "admin" && contraseña == 12345) {
         if (reservas.length > 0) {
@@ -54,7 +56,7 @@ function borrarReserva () {
 
     for (let i = 0; i < reservas.length; i++) {
         if (reservas[i][0] === numero) {
-            reservas.splice(i, 1); // elimina esa reserva
+            reservas.splice(i, 1);
             alert("RESERVA N° " + numero + " ELIMINADA correctamente.");
             return;
         }
